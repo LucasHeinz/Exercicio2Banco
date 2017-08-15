@@ -2,6 +2,7 @@ package model;
 
 public class Carro {
 
+	private Integer codigo;
 	private String placa;
 	private String tipo;
 	private String cor;
@@ -10,8 +11,9 @@ public class Carro {
 	public Carro() {
 	}
 
-	public Carro(String placa, String tipo, String marca, String cor) {
+	public Carro(Integer codigo, String placa, String tipo, String marca, String cor) {
 		super();
+		this.codigo = codigo;
 		this.placa = placa;
 		this.tipo = tipo;
 		this.marca = marca;
@@ -21,6 +23,14 @@ public class Carro {
 	@Override
 	public String toString() {
 		return "Placa: " + this.placa + " Tipo: " + this.tipo + " Marca: " + this.marca + " Cor: " + this.cor;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getPlaca() {
