@@ -41,14 +41,14 @@ public class CarroDao {
 		return carros;
 	}
 
-	public boolean inserir(String placa, String tipo, String marca, String cor) throws SQLException {
+	public boolean inserir(Carro carro) throws SQLException {
 		String sql = "INSERT INTO CARROS (CODIGO, PLACA, TIPO, MARCA, COR) VALUES (SEQ_CARROS.nextval, ?, ?, ?, ?)";
 
 		PreparedStatement statement = con.prepareStatement(sql);
-		statement.setString(1, placa);
-		statement.setString(2, tipo);
-		statement.setString(3, marca);
-		statement.setString(4, cor);
+		statement.setString(1, carro.getPlaca());
+		statement.setString(2, carro.getTipo());
+		statement.setString(3, carro.getMarca());
+		statement.setString(4, carro.getCor());
 
 		return statement.executeUpdate() > 0;
 	}

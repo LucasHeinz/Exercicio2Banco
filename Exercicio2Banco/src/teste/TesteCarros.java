@@ -13,7 +13,7 @@ public class TesteCarros {
 	public static void main(String[] args) throws SQLException {
 		try(Connection con = new ConnectionPoolOracle().getConnection()) {
 			CarroDao carroDao = new CarroDao(con);
-			carroDao.inserir("SQL - 1234", "fusca", "Volkswagen", "amarelo");
+//			carroDao.inserir("SQL - 1234", "fusca", "Volkswagen", "amarelo");
 			
 			List<Carro> carros = carroDao.lista();
 			for (Carro carro : carros) {
