@@ -16,4 +16,10 @@ public class CarroService {
 		}
 	}
 	
+	public void excluir(Integer codigo) throws SQLException{
+		try (Connection con = new ConnectionPoolOracle().getConnection()) {
+			new CarroDao(con).excluir(codigo);
+		}
+	}
+	
 }

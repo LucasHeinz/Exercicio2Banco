@@ -19,6 +19,14 @@ public class Carro {
 		this.marca = marca;
 		this.cor = cor;
 	}
+	
+	public Carro(String placa, String tipo, String marca, String cor) {
+		super();
+		this.placa = placa;
+		this.tipo = tipo;
+		this.marca = marca;
+		this.cor = cor;
+	}
 
 	@Override
 	public String toString() {
